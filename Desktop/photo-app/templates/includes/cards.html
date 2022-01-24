@@ -1,0 +1,53 @@
+{% if posts|length > 0 %}
+  {% for i in range(posts|length) %}
+<section class="post" style="padding: 0px; margin-left: 5px">
+    <div class = "postheader">
+        <h3> {{ posts[i].user.get('username') }} </h3>
+        <i class="fas fa-ellipsis-h fa-lg" style="margin: 20px; margin-top: 30px"></i>
+    </div>
+    <img src="{{ posts[i].get('image_url') }}"
+        alt="post image"/>
+    <div class = "iconbar" style="margin: 5px">
+        <div class="icons" style="margin: 5px">
+            <i class="far fa-heart fa-lg"></i>
+            <i class="far fa-comment fa-lg"></i>
+            <i class="far fa-paper-plane fa-lg"></i>
+        </div>
+        <i class="far fa-bookmark fa-lg" style="margin: 5px; margin-right: 20px"></i>
+    </div>
+    <section class="likes" style="margin-left: 5px"> <p> {{ posts[i].get('likes') }} likes </p> </section>
+    <div class = "caption" style="margin: 5px">
+        <p1> {{ posts[i].user.get('username') }} </p1>
+        <p2 style="padding-left: 5px"> {{ posts[i].get('title') }} </p2>
+        <button style="right: 0"> more </button>
+    </div>
+    <section class = "commentsection" style= "margin-bottom: 5px; margin-left: 5px">
+      <p1> {% if posts[i].comments|length > 1 %}
+        <button style="background: white; border: white; color: #0066CC; display: flex; margin-bottom: 5px"> View all {{ posts[i].comments|length }} comments </button>
+        {% else %}
+            <p>     </p>
+        {% endif %}
+      </p1>
+        <div class = "comment1" style= "margin-bottom: 10px; margin-top: 5px">
+          {% if posts[i].comments|length > 0 %}
+            <div> <p1> {{ posts[i].comments[0].user.get('username')}}</p1> </div>
+            <div> <p2> {{ posts[i].comments[0].text}} </p2> </div>
+        {% else %}
+            <p>    </p>
+        {% endif %}
+      </div>
+    <p3 style= "margin-top: 5px"> {{ posts[i].get('display_time')}} </p3>
+    </section>
+    <hr size="1" width="100%" color="grey">
+    <div class="postbottom" style="margin-bottom: 10px; margin-top: 10px">
+        <div class="addcomment">
+            <i class="far fa-smile fa-lg" style= "margin-left: 5px"></i>
+            <p1 style="font-weight: normal"> Add a comment...</p1>
+        </div>
+        <div> <button> Post </button> </div>
+    </div>
+</section>
+{% endfor %}
+{% else %}
+<p> there are no posts </p>
+{% endif %}

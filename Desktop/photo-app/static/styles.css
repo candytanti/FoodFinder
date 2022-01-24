@@ -1,0 +1,316 @@
+.everything{
+    background-color: #F2F2F2;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+p {
+    margin: 0px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+    margin-left: 75px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.topbar {
+    display: flex;
+    background: white;
+    padding: 5px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: fit-content;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+      display: flex;
+      background: white;
+      padding: 5px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: fit-content;
+      justify-content: space-between;
+      align-items: center;
+}
+
+h1 {
+    margin: 10px;
+    margin-left: 20px;
+    font-size: 35px;
+    font-family: 'Comfortaa', cursive;
+}
+
+h2 {
+  font-family: 'Comfortaa', cursive;
+
+}
+
+h3 {
+    font-family: 'Comfortaa', cursive;
+    font-size: 25px;
+}
+
+.post h3 {
+    margin-left: 20px;
+    font-family: 'Comfortaa', cursive;
+}
+
+.container{
+    position: relative;
+    width: fit-content;
+    justify-content: flex-end;
+    padding: 10px;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.container button {
+    background: white;
+    border: white;
+    color: #0066CC;
+}
+
+.container p{
+    margin: 5px;
+}
+
+
+
+section {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.story img {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    margin: 5px;
+}
+
+.panel {
+    flex-direction: column;
+    margin-top: 80px;
+    width: 30%;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.userpanel{
+    flex-direction: row;
+}
+
+.userpanel img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}
+
+.suggestions{
+    align-items: center;
+    flex-direction: row;
+}
+
+.suggestions img {
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+}
+
+.suguser{
+    flex-direction: column;
+    width: 140px;
+}
+
+.suguser p{
+    margin: 3px;
+}
+
+
+.panel button {
+    border:#F2F2F2;
+    color: #0066CC;
+    margin: 5px;
+    height: fit-content;
+}
+
+
+.main{
+    background-color: #F2F2F2;
+    width: 60vw;
+    height: fit-content;
+}
+
+.story{
+    background-color: white;
+    width: 55vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+
+.story img{
+    border: 3px solid grey;
+}
+
+.story p{
+    font-size: 12px;
+    color: grey;
+}
+
+.singlestory{
+    margin-right: 20px;
+    align-items: center;
+}
+
+.post{
+    background-color: white;
+    border: 1px solid grey;
+    width: 55vw;
+    height: fit-content;
+    margin-bottom: 50px;
+}
+
+.post img{
+  width: 100%;
+  height: 60% ;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.postheader{
+  margin: 0px;
+  display: flex;
+  justify-content: space-between;
+  width: 55vw;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  gap: 5px;
+}
+
+
+.iconbar {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+
+.likes p {
+  font-weight: bold;
+}
+
+.caption {
+  display: inline;
+  justify-content: start;
+  padding-left: 5px;
+  gap: 10px;
+}
+
+.caption p1 {
+  font-weight: bold;
+  height: fit-content;
+}
+
+.caption button {
+  background: white;
+  border: white;
+  color: #0066CC;
+}
+
+.comment1 {
+  display: flex;
+  gap: 10px;
+}
+
+.comment1 p1 {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.comment2 {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+.comment2 p1 {
+  font-weight: bold;
+}
+
+.commentsection p3 {
+  color: grey;
+}
+
+
+.addcomment {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+.addcomment p1 {
+  color: grey;
+}
+
+.postbottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.postbottom button {
+  background: white;
+  border: white;
+  color: #0066CC;
+}
+
+.postheader i {
+  margin: 5px;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    body{
+        margin-left: 5px;
+    }
+
+    .main {
+        width: 100vw;
+    }
+
+    .post {
+      width: 99vw;
+    }
+
+    .story {
+      width: 99vw;
+    }
+
+    .singlestory {
+      margin-right: 5px;
+    }
+
+    .panel {
+        display: none;
+    }
+}

@@ -1,0 +1,15 @@
+<section class="main">
+        <section class="story">
+            {% if stories|length > 0 %}
+                {% for i in range(stories|length) %}
+                <section class="singlestory">
+                    <img src="{{ stories[i].user.get('profile_url') }}"
+                    alt="story image"/>
+                    <p> {{ stories[i].user.get('username') }} </p>
+                </section>
+                {% endfor %}
+            {% else %}
+                <p> no stories </p>
+            {% endif %}
+            </section>
+    </section>

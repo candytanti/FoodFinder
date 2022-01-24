@@ -1,0 +1,29 @@
+<body class="everything">
+    <section class="panel">
+
+        <section class="userpanel">
+            <img src="{{ user.get('image_url') }}"
+                alt="current user image"/>
+            <h3 style="margin-left: 15px; font-size: 25px"> {{ user.get('username') }} </h3>
+        </section>
+
+        <p style="color: grey; font-weight: bold"> Suggestions for you</p>
+
+        {% if suggestions|length > 0 %}
+            {% for i in range(suggestions|length) %}
+            <section class="suggestions" style="margin-top: 5px">
+                <img src="{{ suggestions[i].get('image_url') }}"
+                    alt="suggested user image"/>
+                <section class="suguser">
+                    <p style="font-weight: bold">{{ suggestions[i].get('username') }}</p>
+                    <p style="color: grey; font-size: 11px"> suggested for you</p>
+                </section>
+                <button> follow </button>
+            </section>
+            {% endfor %}
+        {% else %}
+            <p> no suggestions </p>
+        {% endif %}
+    </section>
+
+</body>
